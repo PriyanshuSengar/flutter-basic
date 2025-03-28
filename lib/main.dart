@@ -49,12 +49,29 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Container(
-          width: 100,
+          width: 200,
           height: 100,
-          color: Colors.cyanAccent,
-          child: Text("Hello Developer"),
+          color: Colors.green,
+          child: Center(
+            child: Text(
+              "This is a container.",
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
         ),
       ),
+      // Center(
+      //   child: Text("This is first text i have written in flutter."),
+      // ),
+
+      // Center(
+      //   child: Container(
+      //     width: 100,
+      //     height: 100,
+      //     color: Colors.cyanAccent,
+      //     child: Text("Hello Developer"),
+      //   ),
+      // ),
     );
   }
 }
