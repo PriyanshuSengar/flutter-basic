@@ -45,21 +45,32 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
 
-        title: Text('Flutter Basics'),
+        title: Text('Flutter Basics', style: TextStyle(fontSize: 25)),
       ),
-      body: Center(
-        child: Container(
-          width: 200,
-          height: 100,
-          color: Colors.green,
-          child: Center(
-            child: Text(
-              "This is a container.",
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
+      body: Text(
+        'Hello Flutter Dev',
+        style: TextStyle(
+          fontSize: 25,
+          color: Colors.blue[300],
+          fontWeight: FontWeight.bold,
+          backgroundColor: Colors.pink[100],
+          
+          
         ),
       ),
+      // Center(
+      //   child: Container(
+      //     width: 200,
+      //     height: 100,
+      //     color: Colors.green,
+      //     child: Center(
+      //       child: Text(
+      //         "This is a container.",
+      //         style: TextStyle(color: Colors.white),
+      //       ),
+      //     ),
+      //   ),
+      // ),
       // Center(
       //   child: Text("This is first text i have written in flutter."),
       // ),
