@@ -31,7 +31,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
- 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,15 +39,22 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Text('Flutter Basics', style: TextStyle(fontSize: 25)),
       ),
-      // body: Text(
+      body: Center(
+        child: Container(
+          child: Image.asset('assets/images/flutter2.jpg'),
+          height: 100,
+          width: 100,
+        ),
+      ),
+
+      // Text(
       //   'Hello Flutter Dev',
       //   style: TextStyle(
       //     fontSize: 25,
       //     color: Colors.blue[300],
       //     fontWeight: FontWeight.bold,
       //     backgroundColor: Colors.pink[100],
-          
-          
+
       //   ),
       // ),
       // Center(

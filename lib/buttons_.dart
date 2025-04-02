@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
 
-        title: Text('Flutter Basics', style: TextStyle(fontSize: 25)),
+        title: Text('Flutter Basic', style: TextStyle(fontSize: 25)),
       ),
       body: OutlinedButton(
         child: Text("Click me.."),
