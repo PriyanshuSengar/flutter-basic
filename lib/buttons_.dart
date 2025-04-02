@@ -31,7 +31,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
- 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,41 +39,34 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Text('Flutter Basics', style: TextStyle(fontSize: 25)),
       ),
-      // body: Text(
-      //   'Hello Flutter Dev',
-      //   style: TextStyle(
-      //     fontSize: 25,
-      //     color: Colors.blue[300],
-      //     fontWeight: FontWeight.bold,
-      //     backgroundColor: Colors.pink[100],
-          
-          
+      body: OutlinedButton(
+        child: Text("Click me.."),
+        onPressed: () {
+          print("Button Pressed");
+        },
+        onLongPress: () {
+          print("Long Pressed");
+        },
+      ),
+      // Center(
+      //   child: ElevatedButton(
+      //     child: Text("Elevated Button"),
+      //     onPressed: () {
+      //       print("Elevated Pressed");
+      //     },
+      //     onLongPress: () {
+      //       print("Long Pressed");
+      //     },
       //   ),
       // ),
-      // Center(
-      //   child: Container(
-      //     width: 200,
-      //     height: 100,
-      //     color: Colors.green,
-      //     child: Center(
-      //       child: Text(
-      //         "This is a container.",
-      //         style: TextStyle(color: Colors.white),
-      //       ),
-      //     ),
-      //   ),
-      // ),
-      // Center(
-      //   child: Text("This is first text i have written in flutter."),
-      // ),
-
-      // Center(
-      //   child: Container(
-      //     width: 100,
-      //     height: 100,
-      //     color: Colors.cyanAccent,
-      //     child: Text("Hello Developer"),
-      //   ),
+      // TextButton(
+      //   child: Text("Click Me."),
+      //   onPressed: () {
+      //     print("Text Button Clicked.");
+      //   },
+      //   onLongPress: () {
+      //     print("Longpress button activated.");
+      //   },
       // ),
     );
   }
