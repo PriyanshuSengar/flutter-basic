@@ -39,13 +39,70 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Text('Flutter Basics', style: TextStyle(fontSize: 25)),
       ),
-      body: Center(
-        child: Container(
-          child: Image.asset('assets/images/flutter2.jpg'),
-          height: 100,
-          width: 100,
+      body: Container(
+        // width: 300,
+        // height: 300,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          // mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.end,
+          // crossAxisAlignment: CrossAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              // crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        print("Button clicked");
+                      },
+                      child: Text("Click me"),
+                    ),
+                    ElevatedButton(
+                      onPressed: () => print("Just Pressed"),
+                      onLongPress: () {
+                        print("Button Long Pressed");
+                      },
+                      child: Text("Click me to"),
+                    ),
+                  ],
+                ),
+                Text("a", style: TextStyle(fontSize: 50)),
+                Text("b", style: TextStyle(fontSize: 20)),
+                Text("c", style: TextStyle(fontSize: 20)),
+                Text("d", style: TextStyle(fontSize: 20)),
+                Text("e", style: TextStyle(fontSize: 20)),
+              ],
+            ),
+            Text("a", style: TextStyle(fontSize: 50)),
+            Text("b", style: TextStyle(fontSize: 20)),
+            Text("c", style: TextStyle(fontSize: 20)),
+            Text("d", style: TextStyle(fontSize: 20)),
+            Text("e", style: TextStyle(fontSize: 20)),
+            ElevatedButton(
+              onPressed: () {
+                print("Clicked");
+              },
+              child: Text("Clicked"),
+            ),
+          ],
         ),
       ),
+      // Center(
+      //   child: Container(
+      //     child: Image.asset('assets/images/flutter2.jpg'),
+      //     height: 100,
+      //     width: 100,
+      //   ),
+      // ),
 
       // Text(
       //   'Hello Flutter Dev',
