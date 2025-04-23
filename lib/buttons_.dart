@@ -39,15 +39,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Text('Flutter Basic', style: TextStyle(fontSize: 25)),
       ),
-      body: OutlinedButton(
-        child: Text("Click me.."),
-        onPressed: () {
-          print("Button Pressed");
-        },
-        onLongPress: () {
-          print("Long Pressed");
-        },
-      ),
+      // body: OutlinedButton(
+      //   child: Text("Click me.."),
+      //   onPressed: () {
+      //     print("Button Pressed");
+      //   },
+      //   onLongPress: () {
+      //     print("Long Pressed");
+      //   },
+      // ),
       // Center(
       //   child: ElevatedButton(
       //     child: Text("Elevated Button"),
