@@ -35,7 +35,7 @@ class DashBoardScreen extends StatelessWidget {
 
             decoration: BoxDecoration(
               color: Colors.green[400],
-              borderRadius: BorderRadius.only(
+              borderRadius: BorderRadius.only( 
                 topLeft: Radius.circular(20),
                 bottomRight: Radius.circular(20),
               ),
