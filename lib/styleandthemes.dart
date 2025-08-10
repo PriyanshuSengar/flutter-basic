@@ -18,11 +18,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         textTheme: TextTheme(
           headlineSmall: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
-          // subtitle1: TextStyle(
-          //     fontSize: 20,
-          //     fontWeight: FontWeight.bold,
-          //     fontStyle: FontStyle.italic,
-          //   ),
+          titleMedium: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              fontStyle: FontStyle.italic,
+            ),
         ),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Pages'),
@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Text(
             "Luckey",
-            // style: Theme.of(context).textTheme.subtitle1,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
           Text("Luckey", style: Theme.of(context).textTheme.headlineSmall),
           Text(

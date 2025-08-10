@@ -40,7 +40,16 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Flutter Learning', style: TextStyle(fontSize: 25)),
       ),
 
-      body: Text("Luckey", ),
+      body: Center(
+        child: Card(
+          shadowColor: Colors.red,
+          elevation: 20,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Luckey", style: TextStyle(fontSize: 70)),
+          ),
+        ),
+      ),
     );
   }
 }
