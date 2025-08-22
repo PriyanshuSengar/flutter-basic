@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Journy',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -33,26 +33,34 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
- 
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
 
-        title: Text('Flutter Basics', style: TextStyle(fontSize: 25)),
+        title: Text('Flutter Learning', style: TextStyle(fontSize: 25)),
       ),
 
       body: Container(
-        child: Text("Hello Flutter"),
-        color: Colors.amber[200],
-        margin: EdgeInsets.only(left: 20),
-        padding: EdgeInsets.only(top: 10, left: 4),
-        height: 50,
-        width: 90,
+        width: 300,
+        height: 300,
+        child: Stack(
+          children: [
+            Container(width: 200, height: 200, color: Colors.red),
+            Container(width: 150, height: 150, color: Colors.green),
+            Positioned(
+              left: 25,
+              right: 20,
+              bottom: 10,
+              top: 25,
+              child: Container(
+                width: 200,
+                height: 200,
+                color: Colors.yellowAccent,
+              ),
+            ),
+          ],
+        ),
       ),
-      // Padding(
-      //   padding: EdgeInsets.all(20),
-      //   child: Text('Flutter Developer', style: TextStyle(fontSize: 20)),
-      // ),
     );
   }
 }
