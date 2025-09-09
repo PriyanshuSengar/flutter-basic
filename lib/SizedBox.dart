@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -35,14 +33,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    var arrcolor = [
-      Colors.green,
-      Colors.pink,
-      Colors.yellow,
-      Colors.orange,
-      Colors.purple,
-      Colors.black,
-    ];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -50,27 +40,24 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Flutter Learning', style: TextStyle(fontSize: 25)),
       ),
 
-      body: SizedBox(
-        height: 300,
-        
-        child: GridView.count(
-          crossAxisCount: 4,
-          crossAxisSpacing: 11,
-          mainAxisSpacing: 11,
-          children: [
-            Container(color: arrcolor[0]),
-            Container(color: arrcolor[1]),
-            Container(color: arrcolor[2]),
-            Container(color: arrcolor[3]),
-            Container(color: arrcolor[4]),
-            Container(color: arrcolor[5]),
-            Container(color: arrcolor[0]),
-            Container(color: arrcolor[1]),
-          ],
-        ),
-        
+      body: Row(
+        children: [
+          SizedBox.square(
+            dimension: 100,
+            child: ElevatedButton(onPressed: () {}, child: Text('Click')),
+          ),
+          SizedBox(width: 20),
+          SizedBox.square(
+            dimension: 100,
+            child: ElevatedButton(onPressed: () {}, child: Text('Click')),
+          ),
+          SizedBox(width: 50),
+          SizedBox.square(
+            dimension: 100,
+            child: ElevatedButton(onPressed: () {}, child: Text('Click')),
+          ),
+        ],
       ),
-      
     );
   }
 }
