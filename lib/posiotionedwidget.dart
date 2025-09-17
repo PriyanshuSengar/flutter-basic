@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Journy',
+      title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -37,14 +37,21 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
 
-        title: Text('Flutter Learning', style: TextStyle(fontSize: 25)),
+        title: Text('Flutter Basics', style: TextStyle(fontSize: 25)),
       ),
 
-      body: Center(
-        child: Row(
+      body: Container(
+        height: double.infinity,
+        width: 200,
+        color: Colors.green[200],
+        child: Stack(
           children: [
-            Icon(Icons.play_arrow_rounded , size: 200, color: Colors.red),
-            
+            Positioned(
+              bottom: 11,
+              right: 11,
+
+              child: Container(width: 100, height: 100, color: Colors.red),
+            ),
           ],
         ),
       ),
