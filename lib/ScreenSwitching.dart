@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basic/IntroPage.dart';
+import 'package:flutter_basic/PassingDataFromOneScreenoAnotherScreen.dart';
 import 'package:flutter_basic/SplashScreen.dart';
 
 void main() {
@@ -7,6 +8,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -18,21 +20,26 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: SplashScreen(),
+      home: DataPassing(),
     );
   }
 }
 
 class MyHomePagee extends StatefulWidget {
-  const MyHomePagee({super.key, required this.title});
+
+  const MyHomePagee(String string, {super.key, required this.title});
 
   final String title;
 
   @override
-  State<MyHomePagee> createState() => _MyHomePageState();
+  // ignore: no_logic_in_create_state
+  State<MyHomePagee> createState() => _MyHomePageState(_MyHomePageState.new);
 }
 
 class _MyHomePageState extends State<MyHomePagee> {
+  // ignore: prefer_typing_uninitialized_variables
+  var nameFromScreen;
+  _MyHomePageState(this.nameFromScreen);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +49,18 @@ class _MyHomePageState extends State<MyHomePagee> {
         title: Text('Flutter Basics', style: TextStyle(fontSize: 25)),
       ),
 
-      body: Text("Hello World"),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Welcome {$nameFromScreen}",
+              style: TextStyle(fontSize: 20, color: Colors.redAccent),
+            ),
+            ElevatedButton(onPressed: () {}, child: Text("Back")),
+          ],
+        ),
+      ),
     );
   }
 }

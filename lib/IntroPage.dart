@@ -18,7 +18,10 @@ class IntroPage extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => MyHomePagee(title: '')),
+                MaterialPageRoute(
+                  builder:
+                      (context) => MyHomePagee(required.toString(), title: ''),
+                ),
               );
             },
             child: Text("Next"),
