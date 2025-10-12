@@ -40,10 +40,18 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Flutter ', style: TextStyle(fontSize: 25)),
       ),
 
-      body: Center(
-        child: ClipRRect(
-          borderRadius: BorderRadius.all(Radius.elliptical(20, 60)),
-          child: Image.asset('assets/images/userimage.jpeg'),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: RadialGradient(
+            colors: [Color(0xffffecd2), Color(0xfffcb69f)],
+            center: Alignment.topLeft,
+            ),
+          // LinearGradient(
+          //   colors: [Color(0xffffecd2), Color(0xfffcb69f)],
+          //   begin: FractionalOffset(1.0, 1.1),
+          //   end: FractionalOffset(0.1, 1.1),
+          //   stops: [0.1, 0.0],
+          // ),
         ),
       ),
     );
