@@ -21,10 +21,6 @@ class RoundedButton extends StatelessWidget {
       onPressed: () {
         callback!();
       },
-      child:
-          icon != null
-              ? Row(children: [icon!, Text(btnName, style: textStyle)])
-              : Text(btnName, style: textStyle),
       style: ElevatedButton.styleFrom(
         shadowColor: Colors.black,
         backgroundColor: bgColor,
@@ -32,6 +28,10 @@ class RoundedButton extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
       ),
+      child:
+          icon != null
+              ? Row(children: [icon!, Text(btnName, style: textStyle)])
+              : Text(btnName, style: textStyle),
     );
   }
 }

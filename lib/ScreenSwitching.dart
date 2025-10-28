@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basic/IntroPage.dart';
 import 'package:flutter_basic/PassingDataFromOneScreenoAnotherScreen.dart';
-import 'package:flutter_basic/SplashScreen.dart';
 
 void main() {
   runApp(const MyApp());

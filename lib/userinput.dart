@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       body: Center(
-        child: Container(
+        child: SizedBox(
           width: 300,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

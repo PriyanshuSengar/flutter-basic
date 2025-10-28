@@ -42,12 +42,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       body: Container(
-        child: Text("Hello Flutter"),
         color: Colors.amber[200],
         margin: EdgeInsets.only(left: 20),
         padding: EdgeInsets.only(top: 10, left: 4),
         height: 50,
         width: 90,
+        child: Text("Hello Flutter"),
       ),
       // Padding(
       //   padding: EdgeInsets.all(20),

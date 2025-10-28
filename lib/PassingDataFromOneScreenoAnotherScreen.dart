@@ -12,7 +12,7 @@ class DataPassing extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("Intro"), backgroundColor: Colors.green),
       body: Center(
-        child: Container(
+        child: SizedBox(
           width: 200,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

@@ -3,6 +3,8 @@ import 'package:flutter_basic/ScreenSwitching.dart';
 import 'package:flutter_basic/StarefullWidget.dart';
 
 class IntroPage extends StatelessWidget {
+  const IntroPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

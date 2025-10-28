@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,9 +32,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  static const String KEYNAME = "name";
+  var namecontroller = TextEditingController();
+  var valueName = "Save Your Name";
+  @override
+  void initState() {
+    super.initState();
+    getValue();
+  }
+
   @override
   Widget build(BuildContext context) {
-    var time = DateTime.now();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -42,26 +51,45 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       body: Center(
-        child: SizedBox(
-          height: 200,
+        child: Container(
           width: 200,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                "Current time is ${time.weekday}",
-                style: TextStyle(fontSize: 25),
+              TextField(
+                controller: namecontroller,
+                decoration: InputDecoration(
+                  label: Text('User Input'),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide(color: Colors.green),
+                  ),
+                ),
               ),
+              SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {
-                  setState(() {});
+                onPressed: () async {
+                  var Name = namecontroller.text.toString();
+                  var prefs = await SharedPreferences.getInstance();
+                  prefs.setString(KEYNAME, Name);
                 },
-                child: Text('CLick'),
+                child: Text('Save'),
               ),
+              SizedBox(height: 20),
+              Text(valueName),
             ],
           ),
         ),
       ),
     );
+  }
+
+  void getValue() async {
+    var prefs = await SharedPreferences.getInstance();
+    var getName = prefs.getString(KEYNAME);
+
+    setState(() {
+      valueName = getName ?? "No Value Saved";
+    });
   }
 }

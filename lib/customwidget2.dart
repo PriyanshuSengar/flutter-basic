@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               width: 102.6,
               child: RoundedButton(
                 btnName: "Login",
@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
               ),
             ),
-            Container(
+            SizedBox(
               width: 102.6,
               child: RoundedButton(
                 btnName: "Play ",

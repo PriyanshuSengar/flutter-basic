@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Flutter Learning', style: TextStyle(fontSize: 25)),
       ),
 
-      body: Container(
+      body: SizedBox(
         width: 300,
         height: 300,
         child: Stack(

@@ -5,6 +5,8 @@ void main() {
 }
 
 class FlutterApp extends StatelessWidget {
+  const FlutterApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,6 +19,8 @@ class FlutterApp extends StatelessWidget {
 }
 
 class DashBoardScreen extends StatelessWidget {
+  const DashBoardScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +29,7 @@ class DashBoardScreen extends StatelessWidget {
         backgroundColor: Colors.blue[300],
       ),
       backgroundColor: Colors.pink[300],
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         height: double.infinity,
         child: Center(

@@ -42,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
       body: Center(
         child: CircleAvatar(
+          maxRadius: 50,
           child: Container(
             height: 60,
             width: 60,
@@ -56,7 +57,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
-          maxRadius: 50,
         ),
       ),
     );
