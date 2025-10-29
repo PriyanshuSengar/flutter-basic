@@ -1,25 +1,21 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_basic/expandedwidget.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'login_Page_for_Shared_prefrence.dart';
+import 'home.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
-
   @override
-  State<SplashScreen> createState() => _SplashscreenState();
+  State<SplashScreen> createState() => SplashscreenState();
 }
 
-class _SplashscreenState extends State<SplashScreen> {
+class SplashscreenState extends State<SplashScreen> {
+  static const String KEYLOGIN = "Login";
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 5), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => DashBoardScreen()),
-      );
-    });
+    WhereTOGO();
   }
 
   @override
@@ -29,9 +25,9 @@ class _SplashscreenState extends State<SplashScreen> {
         color: Colors.blue,
         child: Center(
           child: Text(
-            "Cashiooo",
+            "To be a Flutter Developer.....",
             style: TextStyle(
-              fontSize: 35,
+              fontSize: 25,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
@@ -39,5 +35,30 @@ class _SplashscreenState extends State<SplashScreen> {
         ),
       ),
     );
+  }
+
+  void WhereTOGO() async {
+    var sharedpref = await SharedPreferences.getInstance();
+    var isLogein = sharedpref.getBool(KEYLOGIN);
+    Timer(Duration(seconds: 5), () {
+      if (isLogein != null) {
+        if (isLogein) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => homepage()),
+          );
+        } else {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => MyHomePage(title: '')),
+          );
+        }
+      } else {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => MyHomePage(title: '')),
+        );
+      }
+    });
   }
 }
